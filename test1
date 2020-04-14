@@ -1,0 +1,12 @@
+module "provider" {
+  source = "./Modules/provider"
+}
+
+resource "aws_instance" "windows2" {
+  ami           = "ami-0a647b8642eaade60"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "windows2"
+  }
+}
