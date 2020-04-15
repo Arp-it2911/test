@@ -1,0 +1,22 @@
+provider "aws" {
+    access_key = "AKIA3V7BGFIX546U6GDI"
+    secret_key = "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"
+    region     = "ap-south-1"
+  }
+
+  resource "aws_instance" "windows3" {
+  ami           = "ami-0a647b8642eaade60"
+  instance_type = "t2.micro"
+
+  security_groups = [
+        "demo1"
+        
+    ]
+
+  tags = {
+    Name = "windows3"
+  }
+
+
+}
+
